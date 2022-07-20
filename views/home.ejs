@@ -3,8 +3,7 @@
 <p><%=homeContent%></p>
 <% posts.forEach((post)=>{%>
     <h1><%=post.title%></h1>
-    <h1><%=post.id%></h1>
-    <p><%=post.content.slice(0,100)%>...<a href="/post/<%=post.title.split(" ").join("-")%>" class="cursor-pointer">Read more</a></p>
+    <p><%=post.content.slice(0,100)%>...<a href="/post/<%=post.id%>" class="cursor-pointer">Read more</a></p>
 <%});%>
 <a href="/compose" class="btn btn-primary pb-5 mb-5">Add New Post</a>
 <%-include('./partials/footer');-%>
